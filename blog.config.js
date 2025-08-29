@@ -4,10 +4,10 @@ const BLOG = {
   // Important page_id！！！Duplicate Template from  https://www.notion.so/tanghh/02ab3b8678004aa69e9e415905ef32a5
   NOTION_PAGE_ID:
     process.env.NOTION_PAGE_ID ||
-    '24fc0bb163cf80c1b9efc8ef7edaca0c',//20250815：has been changed to Amber NOTION BLOG
-  THEME: process.env.NEXT_PUBLIC_THEME || 'hexo', // 
+    '24fc0bb163cf80c1b9efc8ef7edaca0c',//20250829：has been changed to Amber NOTION BLOG
+  THEME: process.env.NEXT_PUBLIC_THEME || 'simple', // 
   LANG: process.env.NEXT_PUBLIC_LANG || 'en-US', // e.g 'zh-CN','en-US'  see /lib/lang.js for more.
-  SINCE: process.env.NEXT_PUBLIC_SINCE || 2021, // e.g if leave this empty, current year will be used.
+  SINCE: process.env.NEXT_PUBLIC_SINCE || 2025, // e.g if leave this empty, current year will be used.
 
   PSEUDO_STATIC: process.env.NEXT_PUBLIC_PSEUDO_STATIC || false, // 伪静态路径，开启后所有文章URL都以 .html 结尾。
   NEXT_REVALIDATE_SECOND: process.env.NEXT_PUBLIC_REVALIDATE_SECOND || 5, // 更新缓存间隔 单位(秒)；即每个页面有5秒的纯静态期、此期间无论多少次访问都不会抓取notion数据；调大该值有助于节省Vercel资源、同时提升访问速率，但也会使文章更新有延迟。
@@ -18,7 +18,7 @@ const BLOG = {
   BIO: process.env.NEXT_PUBLIC_BIO || 'GrowithAmber💪', // 作者简介
   LINK: process.env.NEXT_PUBLIC_LINK || 'https://ambersblog-9mqixbzjy-amber-s-pj.vercel.app' // 网站地址
   //KEYWORDS: process.env.NEXT_PUBLIC_KEYWORD || 'Notion, 博客,AmbersBlog', // 网站关键词 英文逗号隔开//STOPPED USING DUE TO ERROR FROM TERMINAL
-  BLOG_FAVICON: process.env.NEXT_PUBLIC_FAVICON || '/favicon.ico', // blog favicon 配置, 默认使用 /public/favicon.ico，支持在线图片，如 https://img.imesong.com/favicon.png
+  module.exports = {BLOG_FAVICON: process.env.NEXT_PUBLIC_FAVICON || '/favicon.ico'}|| '/favicon.ico', // blog favicon 配置, 默认使用 /public/favicon.ico，支持在线图片，如 https://img.imesong.com/favicon.png
   BEI_AN: process.env.NEXT_PUBLIC_BEI_AN || '', // 备案号 闽ICP备XXXXXX
   BEI_AN_LINK: process.env.NEXT_PUBLIC_BEI_AN_LINK || 'https://beian.miit.gov.cn/', // 备案查询链接，如果用了萌备等备案请在这里填写
 
@@ -62,7 +62,7 @@ const BLOG = {
   // 欢迎语打字效果,Hexo,Matery主题支持, 英文逗号隔开多个欢迎语。
   GREETING_WORDS:
     process.env.NEXT_PUBLIC_GREETING_WORDS ||
-    'Hi,Welcome to Amber's Blog, こんにちは、よろしくお願いします~,哈咯咯🎉',
+    'Hi,Welcome to My Blog🎉',
 
   // uuid重定向至 slug
   UUID_REDIRECT: process.env.UUID_REDIRECT || false
