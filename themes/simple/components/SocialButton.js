@@ -63,15 +63,7 @@ const SocialButton = () => {
             <i className='fab fa-instagram transform hover:scale-125 duration-150' />
           </a>
         )}
-        {siteConfig('CONTACT_EMAIL') && (
-          <a
-            target='_blank'
-            rel='noreferrer'
-            title={'email'}
-            href={`mailto:${siteConfig('CONTACT_EMAIL')}`}>
-            <i className='fas fa-envelope transform hover:scale-125 duration-150' />
-          </a>
-        )}
+  {/* 邮箱按钮已禁用，不显示 */}
         {JSON.parse(siteConfig('ENABLE_RSS')) && (
           <a
             target='_blank'
